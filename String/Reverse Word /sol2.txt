@@ -1,0 +1,17 @@
+import java.util.*;
+import java.util.stream.*;
+
+class GeeksforGeeks {
+    public static void main(String[] args) {
+        String s = "Java of the Day";
+        String result = Arrays.stream(s.split(" "))
+                              .map(GeeksforGeeks::reverseWord)
+                              .collect(Collectors.joining(" "));
+        System.out.println(result);
+    }
+
+    // Method to reverse a word
+    private static String reverseWord(String word) {
+        return new StringBuilder(word).reverse().toString();
+    }
+}

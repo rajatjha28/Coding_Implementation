@@ -1,0 +1,22 @@
+import java.util.*;
+import java.util.stream.*;
+
+class GeeksforGeeks{
+    public static void main (String[] args){
+        String s = new String("Java of the Day");
+        String[] str = s.split(" ");
+        int len = str.length;
+        String ans = new String();
+        for(int i=0;i<len;i++){
+            // System.out.println("O");
+            int count = str[i].length();
+            while(count>0){
+                // System.out.println("I");
+                ans = ans+(String.valueOf(str[i].charAt(count-1)));
+                count--;
+            }
+            if(i!=len-1) ans = ans+(" ");
+        }
+        System.out.println(ans);
+    }
+}
